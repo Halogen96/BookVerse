@@ -1,0 +1,118 @@
+*{
+    margin: 0%;
+    }
+    
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    @font-face {
+        font-family: ainsdalb;
+        src: url(Fonts/AestheticRegular-8M5dM.ttf);
+      }
+
+      @font-face {
+        font-family: samble;
+        src: url(Fonts/samble.ttf);
+      }
+
+    
+    nav{
+        background-color: rgb(99, 41, 15)   ;
+        display: flex;
+        border-radius: 15px;
+        margin: 0.4rem;
+        justify-content: flex-end;
+        align-items: center;
+        text-decoration: none;
+        box-shadow: 2px 2px 20px rgb(0, 0, 0);
+    }
+    
+    nav ul {
+        display: flex;
+        font-family: Anton, serif;
+        padding: 0.8rem;
+        margin-left: 35rem;
+    }
+    
+    .logo
+    {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-family: samble, serif;
+        font-size: 75px;
+        padding: 0.8rem;
+        padding-left: 1.8rem;
+        align-items: center;
+        margin-right: auto;
+        letter-spacing: 0.15rem;
+        -webkit-text-stroke: 0.4px bisque;
+    }
+    
+    .rightNav{
+        font-family: anton, serif;
+        width:fit-content;
+        background: rgb(99, 41, 15);
+        border: 1px solid bisque;
+        color: bisque;
+
+        margin: 8px;
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+    }
+
+    .rightNav:hover{
+        background: bisque;
+        color: brown;
+        transition: 0s;
+        letter-spacing: 2px;
+    } 
+
+    .rightNav span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.3s;
+      }
+      
+      .rightNav span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.3s;
+      }
+      
+      .rightNav:hover span {
+        padding-right: 25px;
+      }
+      
+      .rightNav:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+
+
+body{
+    background: rgb(236, 192, 138);
+    background-image: url('Images/etextured4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.quote{
+    padding: 2rem;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    padding-left: 3rem;
+    font-family: ainsdalb;
+    margin-top: 2rem;
+}
+
+p{
+    margin-top: 2rem;
+}

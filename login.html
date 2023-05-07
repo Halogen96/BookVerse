@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse</title>
+</head>
+<body>
+    
+    <nav>
+        <h1 class="logo">  BookVerse </h1>
+        <ul class="navbar">
+            
+        
+            <button class="rightNav"><a href="Homepage.html"><span>Home</span></a></button>
+            <button class="rightNav"><a href="signup.html"><span>Create Account</span></a></button>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1 class="login"> LOG IN </h1>
+        <i class='bx bx-envelope'></i>
+        <input type="email" class="text" placeholder="Email ID">
+        <i class='bx bx-key'></i>
+        <input type="password" class="text" placeholder="Password">
+        <button class="btn"> <span> <a href="#"> ENTER </a> </span> </button>
+    </div>
+
+    <script>
+        const btn=document.querySelector('.btn');
+        btn.onmousemove= function(e){
+            const x= e.pageX - btn.offsetLeft;
+            const y= e.pageY - btn.offsetTop;
+
+            btn.style.setProperty('--x', x + 'px');
+            btn.style.setProperty('--y', y + 'px');
+        }
+    </script>
+</body>
+</html>

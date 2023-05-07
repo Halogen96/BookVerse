@@ -1,0 +1,217 @@
+@font-face {
+    font-family: ainsdalb;
+    src: url(Fonts/samble.ttf);
+}
+
+/*navbar*/
+
+*{
+    margin: 0%;
+    }
+    
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    @font-face {
+        font-family: ainsdalb;
+        src: url(Fonts/samble.ttf);
+      }
+
+      @font-face {
+        font-family: samble;
+        src: url(Fonts/samble.ttf);
+      }
+
+    
+    nav{
+        background-color: rgb(99, 41, 15)   ;
+        display: flex;
+        border-radius: 15px;
+        margin: 0.4rem;
+        justify-content: flex-end;
+        text-decoration: none;
+        box-shadow: 1px 1px 20px rgb(0, 0, 0);
+        width:99%;
+        overflow: hidden;
+    }
+    
+    nav ul {
+        display: flex;
+        font-family: Anton, serif;
+        padding: 0.8rem;
+        margin-left: 35rem;
+        justify-content: start;
+    }
+    
+    .logo
+    {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-family: samble, serif;
+        font-size: 75px;
+        padding: 0.8rem;
+        padding-left: 1.8rem;
+        align-items: center;
+        justify-content: flex-start;
+        letter-spacing: 0.15rem;
+        -webkit-text-stroke: 0.4px bisque;
+        margin-right: auto;
+    }
+    
+    .rightNav{
+        font-family: anton, serif;
+        
+        background: rgb(99, 41, 15);
+        border: 1px solid bisque;
+        color: bisque;
+        transition: 0.5s;
+        margin: 8px;
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        flex-wrap: wrap;
+    }
+    
+    .rightNav:hover{
+        background: bisque;
+        color: brown;
+        transition: 0s;
+        letter-spacing: 2px;
+    } 
+
+    .rightNav span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.3s;
+      }
+      
+      .rightNav span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.3s;
+      }
+      
+      .rightNav:hover span {
+        padding-right: 25px;
+      }
+      
+      .rightNav:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+
+/* navbar ends */
+
+
+
+body{
+    background: rgb(236, 192, 138);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Images/textured4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+div{
+    font-family: anton, serif;
+    letter-spacing: 2px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background: rgb(99, 41, 15) ;
+    flex-direction: column;
+    width: 30rem;
+    height: 25rem;
+    margin: 3rem;
+    box-shadow: 2px 2px 20px black;
+}
+
+.login{
+    -webkit-text-stroke: 0.4px bisque;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+
+
+.text{
+    font-family: anton, serif;
+    background: bisque;
+    width: 20rem;
+    height: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin: 0.8rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+     padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px; 
+    padding-left: 50px;
+    box-shadow: 1px 1px 20px rgb(143, 116, 116);
+    margin: 0;
+}
+
+.btn{
+    margin: 2.5rem;
+    list-style: none;
+    background: bisque;
+    color: brown;
+    font-family: anton, serif;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    height: 3.5rem;
+    width: 10rem;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 1px 1px 20px rgb(143, 116, 116);
+}
+
+.btn span{
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    color: black;
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before{
+    width: 100px;
+    height: 100px;
+    color: black;
+}
+
+
+i{
+    position: relative;
+    top: 40px;
+    right:10.2rem;
+}

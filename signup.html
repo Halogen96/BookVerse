@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVerse</title>
+</head>
+<body>
+    
+    <nav>
+        <h1 class="logo">  BookVerse </h1>
+        <ul class="navbar">
+            <button class="rightNav"><a href="Homepage.html"><span>Home</span></a></button>
+            <button class="rightNav"><a href="login.html"><span>Log-in</span></a></button>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1 class="login"> SIGN UP </h1>
+        <i class='bx bx-user'></i>
+        <input type="text" class="text" placeholder="Name"  id="name">
+
+        <i class='bx bx-envelope'></i>
+        <input type="email" class="text" placeholder="Email ID" id="email" >
+
+        <i class='bx bxs-school' ></i>
+        <input type="number" class="text" placeholder="PRN" id="prn" >
+
+        <i class='bx bx-phone' ></i>
+        <input type="number" class="text" placeholder="Phone Number" id="phone" >
+
+        <i class='bx bx-user'></i>
+        <select class="dropdown">
+            <option selected disabled color="gray">Type of consumer</option>
+            <option >User</option>
+            <option >Admin</option>
+        </select>
+
+
+
+        <i class='bx bx-key'></i>
+        <input type="password" class="text" id="password" placeholder="Password" required>
+
+        <i class='bx bx-key'></i>
+        <input type="password" class="text" id="confirm_password" placeholder="Confirm Password" required>
+
+        <button type="submit" class="btn" onclick="validate_password()" id="button"> <span> <a > ENTER </a> </span> </button>
+    </div>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+        const btn=document.querySelector('.btn');
+        btn.onmousemove= function(e){
+            const x= e.pageX - btn.offsetLeft;
+            const y= e.pageY - btn.offsetTop;
+
+            btn.style.setProperty('--x', x + 'px');
+            btn.style.setProperty('--y', y + 'px');
+        }
+
+        function validate_password() {
+            
+
+
+            var password= document.getElementById('password').value;
+            var confirm_password= document.getElementById('confirm_password').value;
+
+             var name= document.getElementById('name').value;
+            var phone= document.getElementById('phone').value;
+            var prn= document.getElementById('prn').value;
+            var email= document.getElementById('email').value;
+
+
+            if(name.length==0 || phone.length==0 || prn.length==0 || email.length==0 || password.length==0 || confirm_password.length==0)
+            {
+                alert("Please enter every field.");
+            }
+            else if(phone.length!=10){
+                alert("Phone number not valid");
+            }
+            else{
+                if(password.length>8 && password.length<15)
+                {
+                    if(password!= confirm_password)
+                    {
+                        alert("Password does not match.");
+                    }
+                    else{
+                        window.location.href = "issue.html";
+                    }
+                }
+                else{
+                    alert("Password should be within 8 and 15 characters.");
+                }
+                
+            }
+        }
+    </script>  
+        
+    
+</body>
+</html>
